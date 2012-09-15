@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Basic C</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Basic C</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>History</h1></header>
+            
+            
+            <section><ul>
+<li>Developed by Dennis Ritchie between 1969 and 1973<ol>
+<li>with Brian Kernigham (K&amp;R C) </li>
+<li>Book: The C Programming Language </li>
+</ol>
+</li>
+<li>One of the most widely used languages of all time</li>
+<li>Named C becuase its features were derived from "B" <ol>
+<li>"A stripped down verison of BCPL"</li>
+</ol>
+</li>
+<li>Influenced many languages, most notably c++ <ol>
+<li>C++ is an extension of C</li>
+</ol>
+</li>
+<li>Heavily incorporated with Unix development<ol>
+<li>Before C, Unix was written in assembly</li>
+</ol>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>What Is?...</h1></header>
+            
+            
+            <section><ul>
+<li>C is an imperative (procedural) language </li>
+<li>Design to provide low-level access to memory</li>
+<li>Requires minimal run-time support </li>
+<li>Supersedes many applications that previously were in assembly</li>
+<li>Awesome for cross-platform compiling</li>
+<li>mips, ia64, x86[_64]</li>
+<li>Used in a wide variety of applications, including microcontrollers and supercomputers</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Basic Syntax</h1></header>
+            
+            
+            <section><ul>
+<li>Variables are create by announcing the type, followed by the name, and ended with a semicolon</li>
+<li>
+<p>So this would create an integer named foo: </p>
+<p>int foo; </p>
+</li>
+<li>
+<p>You can assign a value to the variable directly with </p>
+<p>int foo = 100; 
+foo = 100</p>
+</li>
+<li>
+<p>Functions are declared by specifying a return type, with arguments in paren's, and the code block in curly braces. </p>
+<p>int main(int argc, char *argv) { 
+    return 0; 
+}</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Hello World!</h1></header>
+            
+            
+            <section><p>Some basic C source: </p>
+<pre><code>#include &lt;stdio.h&gt; 
+int main(int argc, char *argv[]) 
+{
+    printf("Hello World!\n"); 
+    return 0;
+}
+</code></pre>
+<p>Output: 
+Hello World!</p>
+<p>Source included as hello.c</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Line By Line</h1></header>
+            
+            
+            <section><pre><code>#include &lt;stdio.h&gt;
+</code></pre>
+<ul>
+<li>Inlclude the standard IO library</li>
+<li>This includes the <code>printf</code> function</li>
+<li>Gives you a set of <i>streams</i><ol>
+<li>These streams include: <ol>
+<li>stdin    - input stream </li>
+<li>stdout   - output stream</li>
+<li>stderr   - error stream</li>
+</ol>
+</li>
+<li>All of these will display or receive input from the terminal </li>
+<li>printf is a function that utilizes it. (well see its use later)</li>
+</ol>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The Main Function</h1></header>
+            
+            
+            <section><pre><code>int main(int argc, char *argv[])
+</code></pre>
+<ul>
+<li>The infamous <i>main</i> function</li>
+<li><code>int</code> is a base C data type <ol>
+<li>At least 16 bits in size, depends on architecture. </li>
+</ol>
+</li>
+<li><code>char</code> is another base type<ol>
+<li>Smallest unit of the C data types</li>
+</ol>
+</li>
+<li>In this case the value returned, of type int, is the exit status</li>
+<li>A return status of EXIT_SUCCESS == 0, is a good thing<ol>
+<li>A return of &gt; 0 is usually an error</li>
+</ol>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Main Function Cont.</h1></header>
+            
+            
+            <section><pre><code>int main(int argc, char *argv[])
+</code></pre>
+<ul>
+<li>argc (Argument count): A gauranteed non-zero number <ol>
+<li>argv[argc] is garaunteed to be null </li>
+</ol>
+</li>
+<li>argv (Argument Array): An array of arguments(char arrays) that have been passed to the executable</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Pointers</h1></header>
+            
+            
+            <section><ul>
+<li>See that char *argv[]? Think of it as a pointer to a list of arrays. </li>
+<li>Take a deep breath</li>
+<li>Remember that C can directly access values at an address </li>
+<li>The size, or rather the amount of things we are pointing to <b>doesn't matter</b> </li>
+<li>As long as you play nice, you won't get a segfault. </li>
+<li>Using this idea, we can point to the start of a series of <code>char</char> arrays</li>
+<li>In <code>int main(int argc, char *argv[])</code>, the argv is just such a thing</li>
+<li>By getting argv[0], we are retrieving a pointer to the first argument provided to the program</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Pointers Cont.</h1></header>
+            
+            
+            <section><ul>
+<li>
+<p>So: </p>
+<p>int foo; 
+int *bar;
+bar = &foo; </p>
+<p>char *str = "Hello World!"; 
+char baz = str[0];</p>
+</li>
+<li>
+<p>The <code>&amp;</code> operator retrieves the address for the variable</p>
+</li>
+<li>We can <i>dereference</i> a pointer, or retrieve it's value by putting an asterisk in front of it</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Ouput</h1></header>
+            
+            
+            <section><pre><code>printf("Hello World!\n");
+</code></pre>
+<ul>
+<li>Pretty simple </li>
+<li>The printf function is included in the stdio.h</li>
+<li>printf takes a an array of strings as the first argument </li>
+<li>If you passed in str from the previous example, that would be fine: 
+    printf(str); </li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: babbyc.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Returning</h1></header>
+            
+            
+            <section><pre><code>return 0;
+</code></pre>
+<ul>
+<li>Returning 0 to the caller (the OS) </li>
+<li>By directly returning 0, we're saying it was sucessful</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="babbyc.md">babbyc.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Basic C</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">History</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">What Is?...</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Basic Syntax</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Hello World!</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Line By Line</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">The Main Function</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Main Function Cont.</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Pointers</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Pointers Cont.</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Ouput</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Returning</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
