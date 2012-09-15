@@ -85,23 +85,23 @@
             
             
             <section><ul>
-<li>Developed by Dennis Ritchie between 1969 and 1973<ol>
-<li>with Brian Kernigham (K&amp;R C) </li>
-<li>Book: The C Programming Language </li>
-</ol>
+<li>Developed by Dennis Ritchie between 1969 and 1973<ul>
+<li>With Brian Kernigham (K&amp;R C)</li>
+<li>Book: The C Programming Language</li>
+</ul>
 </li>
 <li>One of the most widely used languages of all time</li>
-<li>Named C becuase its features were derived from "B" <ol>
+<li>Named C becuase its features were derived from "B"<ul>
 <li>"A stripped down verison of BCPL"</li>
-</ol>
+</ul>
 </li>
-<li>Influenced many languages, most notably c++ <ol>
+<li>Influenced many languages, most notably C++<ul>
 <li>C++ is an extension of C</li>
-</ol>
+</ul>
 </li>
-<li>Heavily incorporated with Unix development<ol>
+<li>Heavily incorporated with Unix development<ul>
 <li>Before C, Unix was written in assembly</li>
-</ol>
+</ul>
 </li>
 </ul></section>
             
@@ -134,9 +134,9 @@
             
             
             <section><ul>
-<li>C is an imperative (procedural) language </li>
+<li>C is an imperative (procedural) language</li>
 <li>Design to provide low-level access to memory</li>
-<li>Requires minimal run-time support </li>
+<li>Requires minimal run-time support</li>
 <li>Supersedes many applications that previously were in assembly</li>
 <li>Awesome for cross-platform compiling</li>
 <li>mips, ia64, x86[_64]</li>
@@ -174,18 +174,21 @@
             <section><ul>
 <li>Variables are create by announcing the type, followed by the name, and ended with a semicolon</li>
 <li>
-<p>So this would create an integer named foo: </p>
-<p>int foo; </p>
+<p>So this would create an integer named foo:</p>
+<p>!cpp
+int foo;</p>
 </li>
 <li>
-<p>You can assign a value to the variable directly with </p>
-<p>int foo = 100; 
-foo = 100</p>
+<p>You can assign a value to the variable directly with</p>
+<p>!cpp
+int foo = 100;
+foo = 100;</p>
 </li>
 <li>
-<p>Functions are declared by specifying a return type, with arguments in paren's, and the code block in curly braces. </p>
-<p>int main(int argc, char *argv) { 
-    return 0; 
+<p>Functions are declared by specifying a return type, with arguments in paren's, and the code block in curly braces.</p>
+<p>!cpp
+int main(int argc, char *argv) {
+    return 0;
 }</p>
 </li>
 </ul></section>
@@ -212,23 +215,31 @@ foo = 100</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Hello World!</h1></header>
             
             
-            <section><p>Some basic C source: </p>
-<pre><code>#include &lt;stdio.h&gt; 
-int main(int argc, char *argv[]) 
-{
-    printf("Hello World!\n"); 
-    return 0;
-}
-</code></pre>
-<p>Output: 
-Hello World!</p>
-<p>Source included as hello.c</p></section>
+            <section><p>Some basic C source:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+<p>Output:</p>
+<blockquote>
+<p>Hello World!</p>
+</blockquote>
+<p>Source is included in this repository as hello.c</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -252,27 +263,28 @@ Hello World!</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Line By Line</h1></header>
             
             
-            <section><pre><code>#include &lt;stdio.h&gt;
-</code></pre>
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+</pre></div>
+</td></tr></table>
 <ul>
 <li>Inlclude the standard IO library</li>
 <li>This includes the <code>printf</code> function</li>
-<li>Gives you a set of <i>streams</i><ol>
-<li>These streams include: <ol>
-<li>stdin    - input stream </li>
+<li>Gives you a set of <em>streams</em><ul>
+<li>These streams include:<ul>
+<li>stdin    - input stream</li>
 <li>stdout   - output stream</li>
 <li>stderr   - error stream</li>
-</ol>
+</ul>
 </li>
-<li>All of these will display or receive input from the terminal </li>
-<li>printf is a function that utilizes it. (well see its use later)</li>
-</ol>
+<li>All of these will display or receive input from the terminal</li>
+<li>printf is a function that utilizes it. (we'll see its use later)</li>
+</ul>
 </li>
 </ul></section>
             
@@ -298,18 +310,19 @@ Hello World!</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>The Main Function</h1></header>
             
             
-            <section><pre><code>int main(int argc, char *argv[])
-</code></pre>
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</pre></div>
+</td></tr></table>
 <ul>
-<li>The infamous <i>main</i> function</li>
-<li><code>int</code> is a base C data type <ol>
-<li>At least 16 bits in size, depends on architecture. </li>
+<li>The infamous <em>main</em> function</li>
+<li><code>int</code> is a base C data type<ol>
+<li>At least 16 bits in size, depends on architecture.</li>
 </ol>
 </li>
 <li><code>char</code> is another base type<ol>
@@ -345,20 +358,21 @@ Hello World!</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Main Function Cont.</h1></header>
             
             
-            <section><pre><code>int main(int argc, char *argv[])
-</code></pre>
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</pre></div>
+</td></tr></table>
 <ul>
-<li>argc (Argument count): A gauranteed non-zero number <ol>
-<li>argv[argc] is garaunteed to be null </li>
-</ol>
+<li><code>argc</code> (Argument count): A guaranteed non-zero number<ul>
+<li><code>argv[argc]</code> is guaranteed to be null</li>
+</ul>
 </li>
-<li>argv (Argument Array): An array of arguments(char arrays) that have been passed to the executable</li>
+<li><code>argv</code> (Argument Array): An array of arguments(char arrays) that have been passed to the executable</li>
 </ul></section>
             
           </div>
@@ -390,14 +404,14 @@ Hello World!</p>
             
             
             <section><ul>
-<li>See that char *argv[]? Think of it as a pointer to a list of arrays. </li>
+<li>See that <code>char *argv[]</code>? Think of it as a pointer to a list of arrays.</li>
 <li>Take a deep breath</li>
-<li>Remember that C can directly access values at an address </li>
-<li>The size, or rather the amount of things we are pointing to <b>doesn't matter</b> </li>
-<li>As long as you play nice, you won't get a segfault. </li>
-<li>Using this idea, we can point to the start of a series of <code>char</char> arrays</li>
+<li>Remember that C can directly access values at an address</li>
+<li>The size, or rather the amount of things we are pointing to <strong>doesn't matter</strong></li>
+<li>As long as you play nice, you won't get a segfault.</li>
+<li>Using this idea, we can point to the start of a series of <code>char</code> arrays</li>
 <li>In <code>int main(int argc, char *argv[])</code>, the argv is just such a thing</li>
-<li>By getting argv[0], we are retrieving a pointer to the first argument provided to the program</li>
+<li>By getting <code>argv[0]</code>, we are retrieving a pointer to the first argument provided to the program</li>
 </ul></section>
             
           </div>
@@ -422,25 +436,29 @@ Hello World!</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Pointers Cont.</h1></header>
             
             
-            <section><ul>
-<li>
-<p>So: </p>
-<p>int foo; 
-int *bar;
-bar = &foo; </p>
-<p>char *str = "Hello World!"; 
-char baz = str[0];</p>
-</li>
-<li>
-<p>The <code>&amp;</code> operator retrieves the address for the variable</p>
-</li>
-<li>We can <i>dereference</i> a pointer, or retrieve it's value by putting an asterisk in front of it</li>
+            <section><p>So:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="kt">int</span> <span class="n">foo</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">bar</span><span class="p">;</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span>
+
+<span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">baz</span> <span class="o">=</span> <span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</pre></div>
+</td></tr></table>
+<ul>
+<li>The <code>&amp;</code> operator retrieves the address for the variable</li>
+<li>We can <strong>dereference</strong> a pointer, or retrieve it's value by putting an asterisk in front of it</li>
 </ul></section>
             
           </div>
@@ -465,21 +483,24 @@ char baz = str[0];</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Ouput</h1></header>
             
             
-            <section><pre><code>printf("Hello World!\n");
-</code></pre>
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
 <ul>
-<li>Pretty simple </li>
+<li>Pretty simple</li>
 <li>The printf function is included in the stdio.h</li>
-<li>printf takes a an array of strings as the first argument </li>
-<li>If you passed in str from the previous example, that would be fine: 
-    printf(str); </li>
-</ul></section>
+<li>printf takes a an array of strings as the first argument</li>
+</ul>
+<p>If you passed in str from the previous example, that would be fine:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">printf</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></section>
             
           </div>
           <div class="presenter_notes">
@@ -503,17 +524,18 @@ char baz = str[0];</p>
       
       <!-- slide source: babbyc.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Returning</h1></header>
             
             
-            <section><pre><code>return 0;
-</code></pre>
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
 <ul>
-<li>Returning 0 to the caller (the OS) </li>
-<li>By directly returning 0, we're saying it was sucessful</li>
+<li>Returning 0 to the caller (the OS)</li>
+<li>By directly returning 0, we're saying it was successful</li>
 </ul></section>
             
           </div>
