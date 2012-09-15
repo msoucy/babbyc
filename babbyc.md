@@ -69,16 +69,35 @@ Line By Line
 The Main Function
 =================
     int main(int argc, char *argv[])
-    or 
-    int main(int argc, char **argv)
 
 - The infamous <i>main</i> function
+
 - <code>int</code> is a base C data type 
     1. At least 16 bits in size, depends on architecture. 
 - <code>char</code> is another base type
-    1. Smallest unit of the C data types 
+    1. Smallest unit of the C data types
 
 - In this case the value returned, of type int, is the exit status
 - A return status of EXIT_SUCCESS == 0, is a good thing
     1. A return of > 0 is usually an error
 
+---
+
+Main Function Cont.
+===================
+    int main(int argc, char *argv[]) 
+
+- argc (Argument count): A gauranteed non-zero number 
+    1. argv[argc] is garaunteed to be null 
+- argv (Argument Array): An array of arguments(char arrays) that have been passed to the executable
+
+
+Pointers
+========
+- See that char *argv[]? Think of it as a pointer to a list of arrays. 
+- Take a deep breath
+- Remember that C can directly access values at an address 
+- The size, or rather the amount of things we are pointing to <b>doesn't matter</b> 
+- As long as you play nice, you won't get a segfault. 
+
+- Using this idea, we can point to the start of a series of <code>char</char> arrays
