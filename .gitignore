@@ -2,3 +2,6 @@ hello
 presentation.html
 test.md
 theme/
+*.swp
+pointer
+pointers

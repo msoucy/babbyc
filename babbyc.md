@@ -104,8 +104,8 @@ Pointers
 
 ---
 
-Pointers
-========
+Pointers Cont.
+==============
 
 - So: 
 
@@ -117,3 +117,18 @@ Pointers
     char baz = str[0]; // baz is now 'H'
 
 - The <code>&</code> operator retrieves the address for the variable
+- We can <i>dereference</i> a pointer, or retrieve it's value by putting an asterisk in front of it
+
+---
+
+Ouput
+=====
+    printf("Hello World!\n"); 
+
+- Pretty simple 
+- The printf function is included in the stdio.h
+- printf takes a an array of strings as the first argument 
+- If you based in str from the previous example, that would be fine: 
+    printf(str); 
+
+
