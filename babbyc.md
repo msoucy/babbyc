@@ -31,6 +31,26 @@ What Is?...
 
 ---
 
+Basic Syntax
+============
+
+- Variables are create by announcing the type, followed by the name, and ended with a semicolon
+- So this would create an integer named foo: 
+
+    int foo; 
+
+- You can assign a value to the variable directly with 
+
+    int foo = 100; 
+    foo = 100
+
+- Functions are declared by specifying a return type, with arguments in paren's, and the code block in curly braces. 
+
+    int main(int argc, char *argv) { 
+        return 0; 
+    }
+
+--- 
 Hello World!
 ============
 
@@ -109,12 +129,12 @@ Pointers Cont.
 
 - So: 
 
-    int foo; // Declare a int type foo
-    int *bar; // Declare a pointer bar
+    int foo; 
+    int *bar;
     bar = &foo; 
 
-    char *str = "Hello World!"; // Initialize a char array to Hello World!
-    char baz = str[0]; // baz is now 'H'
+    char *str = "Hello World!"; 
+    char baz = str[0];
 
 - The <code>&</code> operator retrieves the address for the variable
 - We can <i>dereference</i> a pointer, or retrieve it's value by putting an asterisk in front of it
@@ -130,6 +150,8 @@ Ouput
 - printf takes a an array of strings as the first argument 
 - If you passed in str from the previous example, that would be fine: 
     printf(str); 
+
+---
 
 Returning
 =========
