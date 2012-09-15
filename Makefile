@@ -1,10 +1,11 @@
-L=landslide -cr -l table -x tables,abbr
+L=landslide -cr -l table -x tables,abbr --debug
 CC=gcc 
 
 build: 
-	$(L) babbyc.md -o babbyc
+	$(L) babbyc.md 
 	$(CC) hello.c -o hello 
 
 clean: 
 	rm -f hello
-	rm -f babbyc 
+	rm -f presentation.html
+	rm -rf ./theme
