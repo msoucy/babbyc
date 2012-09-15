@@ -9,3 +9,4 @@ clean:
 	rm -f hello
 	rm -f presentation.html
 	rm -rf ./theme
+	rm -f pointers
