@@ -10,8 +10,8 @@ History
     - With Brian Kernigham (K&R C)
     - Book: The C Programming Language
 - One of the most widely used languages of all time
-- Named C becuase its features were derived from "B"
-    - "A stripped down verison of BCPL"
+- Named C because its features were derived from "B"
+    - "A stripped down version of BCPL"
 - Influenced many languages, most notably C++
     - C++ is an extension of C
 - Heavily incorporated with Unix development
@@ -82,7 +82,7 @@ Line By Line
 	!cpp
     #include <stdio.h>
 
-- Inlclude the standard IO library
+- Include the standard IO library
 - This includes the `printf` function
 - Gives you a set of *streams*
     - These streams include:
@@ -90,7 +90,7 @@ Line By Line
         - stdout   - output stream
         - stderr   - error stream
     - All of these will display or receive input from the terminal
-    - printf is a function that utilizes it. (we'll see its use later)
+    - printf is a function that utilizes stdin. (we'll see its use later)
 
 ---
 
@@ -102,12 +102,12 @@ The Main Function
 
 - The infamous *main* function
 - `int` is a base C data type
-    1. At least 16 bits in size, depends on architecture.
+    - At least 16 bits in size, depends on architecture.
 - `char` is another base type
-    1. Smallest unit of the C data types
+    - Smallest unit of the C data types
 - In this case the value returned, of type int, is the exit status
 - A return status of EXIT_SUCCESS == 0, is a good thing
-    1. A return of > 0 is usually an error
+    - A return of > 0 is usually an error
 
 ---
 
@@ -119,7 +119,7 @@ Main Function Cont.
 
 - `argc` (Argument count): A guaranteed non-zero number
     - `argv[argc]` is guaranteed to be null
-- `argv` (Argument Array): An array of arguments(char arrays) that have been passed to the executable
+- `argv` (Argument Array): An array of arguments (char arrays) that have been passed to the executable
 
 ---
 
@@ -132,7 +132,7 @@ Pointers
 - The size, or rather the amount of things we are pointing to **doesn't matter**
 - As long as you play nice, you won't get a segfault.
 - Using this idea, we can point to the start of a series of `char` arrays
-- In `int main(int argc, char *argv[])`, the argv is just such a thing
+- In `int main(int argc, char *argv[])`, the `argv` is just such a thing
 - By getting `argv[0]`, we are retrieving a pointer to the first argument provided to the program
 
 ---
@@ -151,19 +151,19 @@ So:
     char baz = str[0];
 
 - The `&` operator retrieves the address for the variable
-- We can **dereference** a pointer, or retrieve it's value by putting an asterisk in front of it
+- We can **dereference** a pointer, or retrieve its value by putting an asterisk in front of it
 
 ---
 
-Ouput
+Output
 =====
 
 	!cpp
     printf("Hello World!\n");
 
 - Pretty simple
-- The printf function is included in the stdio.h
-- printf takes a an array of strings as the first argument
+- The `printf` function is included in the stdio.h
+- `printf` takes a an array of strings as the first argument
 
 If you passed in str from the previous example, that would be fine:
 
