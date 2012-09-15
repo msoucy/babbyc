@@ -29,6 +29,15 @@ What Is?...
    - mips, ia64, x86[_64]
 - Used in a wide variety of applications, including microcontrollers and supercomputers
 
-What Do?...
-===========
+Hello World!
+============
+	#include <stdio.h> 
+	int main(int argc, char *argv[]) {
+		printf("Hello World!\n"); 
+		return 0;
+	}
 
+Output: 
+Hello World!
+
+Simple Enough. 
