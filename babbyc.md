@@ -69,3 +69,16 @@ Line By Line
 The Main Function
 =================
     int main(int argc, char *argv[])
+    or 
+    int main(int argc, char **argv)
+
+- The infamous <i>main</i> function
+- <code>int</code> is a base C data type 
+    1. At least 16 bits in size, depends on architecture. 
+- <code>char</code> is another base type
+    1. Smallest unit of the C data types 
+
+- In this case the value returned, of type int, is the exit status
+- A return status of EXIT_SUCCESS == 0, is a good thing
+    1. A return of > 0 is usually an error
+
