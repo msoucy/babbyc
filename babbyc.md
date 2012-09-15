@@ -71,12 +71,10 @@ The Main Function
     int main(int argc, char *argv[])
 
 - The infamous <i>main</i> function
-
 - <code>int</code> is a base C data type 
     1. At least 16 bits in size, depends on architecture. 
 - <code>char</code> is another base type
     1. Smallest unit of the C data types
-
 - In this case the value returned, of type int, is the exit status
 - A return status of EXIT_SUCCESS == 0, is a good thing
     1. A return of > 0 is usually an error
@@ -91,6 +89,7 @@ Main Function Cont.
     1. argv[argc] is garaunteed to be null 
 - argv (Argument Array): An array of arguments(char arrays) that have been passed to the executable
 
+--- 
 
 Pointers
 ========
@@ -99,5 +98,22 @@ Pointers
 - Remember that C can directly access values at an address 
 - The size, or rather the amount of things we are pointing to <b>doesn't matter</b> 
 - As long as you play nice, you won't get a segfault. 
-
 - Using this idea, we can point to the start of a series of <code>char</char> arrays
+- In <code>int main(int argc, char *argv[])</code>, the argv is just such a thing
+- By getting argv[0], we are retrieving a pointer to the first argument provided to the program
+
+---
+
+Pointers
+========
+
+- So: 
+
+    int foo; // Declare a int type foo
+    int *bar; // Declare a pointer bar
+    bar = &foo; 
+
+    char *str = "Hello World!"; // Initialize a char array to Hello World!
+    char baz = str[0]; // baz is now 'H'
+
+- The <code>&</code> operator retrieves the address for the variable
