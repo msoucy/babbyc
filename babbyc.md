@@ -128,7 +128,12 @@ Ouput
 - Pretty simple 
 - The printf function is included in the stdio.h
 - printf takes a an array of strings as the first argument 
-- If you based in str from the previous example, that would be fine: 
+- If you passed in str from the previous example, that would be fine: 
     printf(str); 
 
+Returning
+=========
+    return 0;
 
+- Returning 0 to the caller (the OS) 
+- By directly returning 0, we're saying it was sucessful

@@ -23,8 +23,10 @@ int main(int argc, char *argv[])
     int *bar; 
     bar = &foo;
 
-    char *str = "Hello World\n"; 
+    char *str = "Hello World!\n"; 
     char baz = str[0]; 
-    
+   
+    printf(str);
+
     return 0; 
 }
